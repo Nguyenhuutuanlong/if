@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra năm nhuận</h1>
+
+<input id="inputYear" type="text" placeholder="Nhập năm cần kiểm tra" style="width: 350px;"> <br> <br>
+<button onclick="checkLeapYear()">Kiểm tra</button>
+<br>
+<button onclick="resetValue()">Reset</button>
+<p id="kq"></p>
+<script>
+    function checkLeapYear() {
+        let pullInput = +document.getElementById('inputYear').value;
+        if (pullInput % 4 == 0 && pullInput % 100 != 0) {
+            document.getElementById('kq').innerHTML = "Năm " + pullInput + " là năm Nhuận"
+        }
+        else if (pullInput % 100 == 0 && pullInput % 400 == 0) {
+            document.getElementById('kq').innerHTML = "Năm " + pullInput + " là năm Nhuận"
+        }
+        else if (pullInput % 400 == 0 && pullInput % 100 != 0){
+            document.getElementById('kq').innerHTML = "Năm " + pullInput + " là năm Nhuận"
+        }
+        else {
+            document.getElementById('kq').innerHTML = "Năm " + pullInput + " không là năm Nhuận"
+        }
+    }
+
+    function resetValue() {
+        document.getElementById('inputYear').value = '';
+        document.getElementById('kq').innerHTML = '';
+    }
+
+
+</script>
+
+</body>
+</html>

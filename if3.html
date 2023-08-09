@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="a">
+<input type="text" id="b">
+<button onclick="kq()">Nhấn</button>
+<p id="kiemtra"></p>
+<script>
+    function kq() {
+        let a = +document.getElementById("a").value
+        let b = +document.getElementById("b").value
+
+
+        if (a > b) {
+            let tong = a + b
+            document.getElementById("kiemtra").innerHTML = "tổng là " + tong
+        }
+        if (a < b) {
+            let tich = a * b
+
+            document.getElementById("kiemtra").innerHTML = "tích là " + tich
+
+        }
+    }
+</script>
+
+
+</body>
+</html>
